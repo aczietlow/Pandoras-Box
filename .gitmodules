@@ -1,0 +1,18 @@
+[submodule "chef/cookbooks/apt"]
+	path = chef/cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "chef/cookbooks/mysql"]
+	path = chef/cookbooks/mysql
+	url = https://github.com/opscode-cookbooks/mysql.git
+[submodule "chef/cookbooks/php"]
+	path = chef/cookbooks/php
+	url = https://github.com/opscode-cookbooks/php.git
+[submodule "chef/cookbooks/vim"]
+	path = chef/cookbooks/vim
+	url = git://github.com/opscode-cookbooks/vim.git
+[submodule "chef/cookbooks/php55-cookbook"]
+	path = chef/cookbooks/php55-cookbook
+	url = https://github.com/aporat/php55-cookbook.git
+[submodule "chef/cookbooks/apache2"]
+	path = chef/cookbooks/apache2
+	url = https://github.com/onehealth-cookbooks/apache2-onehealth.git

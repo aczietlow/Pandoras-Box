@@ -1,0 +1,26 @@
+{
+    "ip": "192.168.44.45",
+    "memory": "2560",
+    "php": {
+        "version": false
+    },
+    "mysql": {
+        "server_root_password": "root"
+    },
+    "git": {
+        "user": {
+            "name": "Example User",
+            "email": "username@example.com"
+        },
+        "core": {
+            "editor": "vim"
+        },
+        "color": {
+            "ui": true
+        }
+    },
+    "drush": {
+      "version": "7.x-5.9",
+      "install_dir": "/usr/share/drush"
+    }
+}

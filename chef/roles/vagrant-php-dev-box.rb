@@ -12,6 +12,7 @@ override_attributes(
 # Run list function we mentioned earlier
 run_list(
     "recipe[apt]",
+    "recipe[apache2]",
     "recipe[mysql::client]",
     "recipe[mysql::server]",
     "recipe[custom::bash]",

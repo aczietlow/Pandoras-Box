@@ -1,7 +1,18 @@
-h2. prereqs
+##prereqs
 
-gem install berkshelf
+###Vagrant
 
-vagrant plugin install vagrant-berkshelf
-vagrant plugin install vagrant-hostmanager
-vagrant plugin install vagrant-omnibus
+###Virtual Box
+
+###Vagrant plugins
+
+  *Berkshelf
+    gem install berkshelf
+
+    vagrant plugin install vagrant-berkshelf
+
+  * Vangrant hostmanager    
+    vagrant plugin install vagrant-hostmanager
+
+  *Vagrant Omibus plugin
+    vagrant plugin install vagrant-omnibus

@@ -22,18 +22,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.synced_folder "data/", "/home/vagrant/Sites"
 
-
+  # Set virtual machine memory.
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", ooyala_config["memory"]]
   end
 
+  # Use the latest version of Chef
   config.omnibus.chef_version = :latest
 
-   config.vm.provision :chef_solo do |chef|
+  config.vm.provision :chef_solo do |chef|
     chef.json = ooyala_config
     chef.cookbooks_path = "chef/cookbooks"
     chef.roles_path = "chef/roles"
     chef.data_bags_path = "chef/data_bags"
     chef.add_role "vagrant-php-dev-box"
-   end
+  end
 end

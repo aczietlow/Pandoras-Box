@@ -9,12 +9,15 @@ override_attributes(
     }
 )
 
+#@TODO: Change apache2's config files to valid 2.4 config files. 
+
 # Run list function we mentioned earlier
 run_list(
     "recipe[apt]",
     "recipe[apache2]",
     "recipe[mysql::client]",
     "recipe[mysql::server]",
+    "recipe[mongodb]",
     "recipe[custom::bash]",
     "recipe[custom::curl]",
     "recipe[composer]",
@@ -23,6 +26,5 @@ run_list(
     #{}"recipe[custom::php]",
     "recipe[custom::rsync]",
     #{}"recipe[custom::xdebug]",
-
-    #{}"recipe[vim]"
+    "recipe[vim]"
 )

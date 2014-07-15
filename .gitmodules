@@ -16,3 +16,6 @@
 [submodule "chef/cookbooks/apache2"]
 	path = chef/cookbooks/apache2
 	url = https://github.com/onehealth-cookbooks/apache2-onehealth.git
+[submodule "chef/cookbooks/composer"]
+	path = chef/cookbooks/composer
+	url = https://github.com/escapestudios-cookbooks/composer.git

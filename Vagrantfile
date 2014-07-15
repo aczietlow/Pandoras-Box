@@ -23,9 +23,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "data/", "/home/vagrant/Sites"
 
 
-   config.vm.provider "virtualbox" do |vb|
-     vb.customize ["modifyvm", :id, "--memory", ooyala_config["memory"]]
-   end
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--memory", ooyala_config["memory"]]
+  end
+
+  config.omnibus.chef_version = :latest
 
    config.vm.provision :chef_solo do |chef|
     chef.json = ooyala_config

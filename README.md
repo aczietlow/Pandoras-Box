@@ -25,6 +25,8 @@ Pandora's Box provides an PHP development environment for modern PHP Frameworks.
 
 ## Server Details
 
+*Pro Tip: The file mount requires sudo. So don't forget to enter your password before you get up to get coffee while this runs. It should take <15 minutes during the first build.
+
 ### Apache
   * version: 2.4
 

@@ -31,8 +31,8 @@ run_list(
     "recipe[zeromq]",
     "recipe[mongodb]",
     "recipe[custom::php]",
-    "recipe[custom::xhprof]",
-    "recipe[custom::xdebug]",
+    # "recipe[custom::xhprof]",
+    # "recipe[custom::xdebug]",
     
     "recipe[custom::bash]",
     "recipe[composer]",

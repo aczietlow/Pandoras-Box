@@ -5,13 +5,12 @@
 ## prereqs
 
 * Virtualbox
-* Vagrant
+* Vagrant | https://www.vagrantup.com/downloads.html
+* Chef DK | http://downloads.getchef.com/chef-dk/
 
 ### Vagrant plugins
 
   * Berkshelf
-    
-  	>gem install berkshelf
 
     >vagrant plugin install vagrant-berkshelf
 

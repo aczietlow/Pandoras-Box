@@ -32,7 +32,7 @@ run_list(
     "recipe[mongodb]",
     "recipe[custom::php]",
     # "recipe[custom::xhprof]",
-    "recipe[custom::xdebug]",
+    # "recipe[custom::xdebug]",
     
     "recipe[custom::bash]",
     "recipe[composer]",

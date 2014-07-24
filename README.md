@@ -11,12 +11,14 @@ Pandora's Box provides an PHP development environment for modern PHP Frameworks.
 ###Vagrant plugins
 
   *Berkshelf
-    gem install berkshelf
-
+    
+  	gem install berkshelf
     vagrant plugin install vagrant-berkshelf
 
-  * Vangrant hostmanager    
+  * Vangrant hostmanager
+
     vagrant plugin install vagrant-hostmanager
 
   *Vagrant Omibus plugin
+  
     vagrant plugin install vagrant-omnibus

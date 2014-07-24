@@ -9,10 +9,6 @@
 
 ### Vagrant plugins
 
-  * Berkshelf
-
-    >vagrant plugin install vagrant-berkshelf
-
   * Vangrant hostmanager
 
     >vagrant plugin install vagrant-hostmanager
@@ -20,6 +16,10 @@
   * Vagrant Omibus plugin
   
     >vagrant plugin install vagrant-omnibus
+
+  * Berkshelf
+
+    >vagrant plugin install vagrant-berkshelf
 
 ## Server Details
 

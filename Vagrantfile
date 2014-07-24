@@ -31,6 +31,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.omnibus.chef_version = :latest
 
   config.vm.provision :chef_solo do |chef|
+    # Install dependencies using berkshelf.
+    config.berkshelf.enabled = true
+    config.berkshelf.berksfile_path = 'chef/Berksfile'
+    
     chef.json = ooyala_config
     chef.cookbooks_path = "chef/cookbooks"
     chef.roles_path = "chef/roles"

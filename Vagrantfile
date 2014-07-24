@@ -35,6 +35,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.berkshelf.enabled = true
     config.berkshelf.berksfile_path = 'chef/Berksfile'
     
+    #debug
+    chef.log_level = :debug
+
     chef.json = ooyala_config
     chef.cookbooks_path = "chef/cookbooks"
     chef.roles_path = "chef/roles"

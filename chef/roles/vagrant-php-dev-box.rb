@@ -28,15 +28,17 @@ run_list(
     "recipe[apache2::mod_ssl]",
     "recipe[mysql::client]",
     "recipe[mysql::server]",
-    "recipe[mongodb]",
-    "recipe[php]",
     "recipe[zeromq]",
+    "recipe[mongodb]",
+    "recipe[custom::php]",
+    ###"recipe[custom::xdebug]",
+    
     "recipe[custom::bash]",
     "recipe[composer]",
-    ##{}"recipe[custom::drush]",
+    "recipe[custom::composer]",
     "recipe[custom::git]",
-    ##{}"recipe[custom::php]",
     "recipe[custom::rsync]",
-    ##{}"recipe[custom::xdebug]",
     "recipe[vim]"
+    
+    
 )

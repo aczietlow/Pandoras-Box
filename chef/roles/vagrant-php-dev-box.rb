@@ -20,7 +20,7 @@ default_attributes(
   }
 )
 
-
+# In Chef these run from top to bottom.
 run_list(
     "recipe[apt]",
     "recipe[apache2]",
@@ -28,14 +28,18 @@ run_list(
     "recipe[apache2::mod_ssl]",
     "recipe[mysql::client]",
     "recipe[mysql::server]",
+    "recipe[zeromq]",
     "recipe[mongodb]",
+    "recipe[custom::php]",
+    # "recipe[custom::xhprof]",
+    # "recipe[custom::xdebug]",
+    
     "recipe[custom::bash]",
-    "recipe[custom::curl]",
-    #{}"recipe[composer]",
-    ##{}"recipe[custom::drush]",
+    "recipe[composer]",
+    "recipe[custom::composer]",
     "recipe[custom::git]",
-    ##{}"recipe[custom::php]",
     "recipe[custom::rsync]",
-    ##{}"recipe[custom::xdebug]",
     "recipe[vim]"
+    
+    
 )

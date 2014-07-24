@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Base box
   config.vm.box = "trusty64"
   config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
-  config.vm.hostname = "ooyala.dev"
+  config.vm.hostname = "pandoras-box.dev"
 
   # Forward ssh keys to allow git cloning.
   config.ssh.forward_agent = true
@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Networking
   config.vm.network :private_network, ip: ooyala_config["ip"]
 
-  config.vm.synced_folder "data/", "/home/vagrant/Sites"
+  config.vm.synced_folder "data/", "/home/vagrant/Sites", type: "nfs"
 
   # Set virtual machine memory.
   config.vm.provider "virtualbox" do |vb|
@@ -35,6 +35,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.berkshelf.enabled = true
     config.berkshelf.berksfile_path = 'chef/Berksfile'
     
+    #debug
+    #chef.log_level = :debug
+
     chef.json = ooyala_config
     chef.cookbooks_path = "chef/cookbooks"
     chef.roles_path = "chef/roles"

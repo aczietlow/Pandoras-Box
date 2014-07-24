@@ -1,6 +1,8 @@
+include_recipe "php"
+
 # List additional php modules to install.
 pkgs = [
-  #"php5-curl"
+  "php5-xsl"
 ]
 
 pkgs.each do |pkg|

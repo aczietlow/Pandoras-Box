@@ -29,6 +29,8 @@ run_list(
     "recipe[mysql::client]",
     "recipe[mysql::server]",
     "recipe[mongodb]",
+    "recipe[php]",
+    "recipe[zeromq]",
     "recipe[custom::bash]",
     "recipe[custom::curl]",
     #{}"recipe[composer]",

@@ -5,6 +5,7 @@ cookbook "apache2", git: 'https://github.com/onehealth-cookbooks/apache2.git', b
 cookbook 'php', '~> 1.4.6'
 cookbook 'mongodb', '~> 0.16.1'
 cookbook 'mysql', '~> 5.3.6'
+cookbook 'zeromq', '~> 1.0.2'
 cookbook 'composer', '~> 1.0.3'
 cookbook 'vim', '~> 1.1.2'
 cookbook 'custom', path: 'cookbooks/custom'

@@ -12,20 +12,15 @@ override_attributes(
 default_attributes(
   "apache" => {
     "listen_ports" => ["80", "443"],
-    "default_modules" => %w(
-        status alias auth_basic authn_file authz_core authz_groupfile authz_host authz_user autoindex
-        dir env mime negotiation setenvif
-    )
+    "version" => "2.4"
   }
 )
 
-#@TODO: Change apache2's config files to valid 2.4 config files. 
 
-# Run list function we mentioned earlier
 run_list(
     "recipe[apt]",
-    "recipe[custom::apache2]",
-    #{}"recipe[apache2]",
+    # "recipe[custom::apache2]",
+    "recipe[apache2]",
     #{}"recipe[apache2::mod_rewrite]",
     #{}"recipe[apache2::mod_ssl]",
     

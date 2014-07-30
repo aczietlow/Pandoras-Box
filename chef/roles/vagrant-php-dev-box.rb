@@ -34,10 +34,10 @@ run_list(
     # "recipe[custom::xhprof]",
     # "recipe[custom::xdebug]",
     
+    "recipe[custom::git]",
     "recipe[custom::bash]",
     "recipe[composer]",
     "recipe[custom::composer]",
-    "recipe[custom::git]",
     "recipe[custom::rsync]",
     "recipe[vim]"
     

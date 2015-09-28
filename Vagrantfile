@@ -48,6 +48,4 @@ Vagrant.configure("2") do |config|
     else
         config.vm.provision :shell, path: "ansible/windows.sh", args: ["hermes"]
     end
-
-    config.vm.synced_folder "./", "/vagrant", type: "nfs"
 end

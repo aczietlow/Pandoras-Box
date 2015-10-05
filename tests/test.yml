@@ -3,6 +3,9 @@
   remote_user: travis
   sudo: true
 
+  vars_files:
+    - vars/all.yml
+
   roles:
     - server
     - apache

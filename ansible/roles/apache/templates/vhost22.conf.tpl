@@ -6,13 +6,24 @@
     ServerAdmin webmaster@localhost
     # get the server name from the Host: header
     UseCanonicalName Off
-    # Requests to 'pandora.dev' will be satisfied by '/var/www/pandora.dev/www/index.php'
+    # Requests to 'pandora.dev' will be satified by '/var/www/pandora.dev/www/index.php'
     VirtualDocumentRoot {{ apache.www_root }}
     ServerName {{ apache.servername }}
+
     <Directory {{ apache.dir_root }}>
-        AllowOverride All
-        Options -Indexes +FollowSymLinks
+        Options FollowSymLinks
+        AllowOverride None
+        RewriteEngine On
+        RewriteBase /
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule /var/www/sites/.*/www/(.*)$ index.php/?q=$1 [L,QSA]
         Order allow,deny
         Allow from all
+    </Directory>
+
+    <Directory />
+    Options FollowSymLinks
+    AllowOverride None
     </Directory>
 </VirtualHost>

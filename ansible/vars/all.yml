@@ -4,9 +4,6 @@ server:
     packages: [vim, git]
     timezone: UTC
     locale: en_US.UTF-8
-vagrant_local:
-    install: '1'
-    vm: { base_box: trusty64, hostname: hermes, ip: 192.168.42.42, memory: '2048', sharedfolder: ./, useVagrantCloud: '1', syncType: nfs }
 apache:
     install: '1'
     servername: localhost

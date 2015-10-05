@@ -59,7 +59,6 @@ Vagrant.configure("2") do |config|
     if which('ansible-playbook')
         config.vm.provision "ansible" do |ansible|
             ansible.playbook = "ansible/playbook.yml"
-            ansible.inventory_path = "ansible/inventories/dev"
             ansible.limit = 'all'
         end
     else

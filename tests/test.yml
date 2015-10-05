@@ -2,4 +2,6 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - github-role-project-name
+    - apache
+    - mysql
+    - php

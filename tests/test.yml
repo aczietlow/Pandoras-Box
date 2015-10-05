@@ -4,6 +4,7 @@
   sudo: true
 
   roles:
+    - server
     - apache
     - mysql
     - php

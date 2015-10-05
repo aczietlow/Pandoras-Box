@@ -32,6 +32,9 @@ Vagrant.configure("2") do |config|
 
     config.vm.box = "ubuntu/trusty64"
 
+    # Only needed for building prototype.
+    config.vm.network "private_network", ip: "#{ip}"
+
     config.vm.provider :virtualbox do |v|
         v.name = "#{project}-box"
         v.customize [

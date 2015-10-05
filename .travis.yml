@@ -13,3 +13,9 @@ install:
 script:
   # Check syntax
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+
+  # Test the roles will actually run
+
+  # Test the roles are idempotence
+
+  # Test the roles did what we said they would

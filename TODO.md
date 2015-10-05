@@ -1,6 +1,6 @@
 * Set our assume vagrant variables
-  * doc_root
-  * etc
+  * ~~doc_root~~
+  * ~~etc~~
 * Install system packages
   * git, sendmail
 * Configure Apache2

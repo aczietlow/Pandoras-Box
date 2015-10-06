@@ -25,12 +25,12 @@ script:
 
 
   # Test the roles did what we said they would
-  - apache2 -v
-#  - >
-#    apache2 -v
-#    | grep -q 'Apache/2.4.22'
-#    && (echo 'Apache2 test: pass' && exit 0)
-#    || (echo 'Apache2 test: fail' && Kexit 1)
+  # On the travis-ci.org containers We get Apache 2.2.22 locally (trusty64) we're using 2.4.7.
+  - >
+    apache2 -v
+    | grep -q 'Apache/2.2.22'
+    && (echo 'Apache2 test: pass' && exit 0)
+    || (echo 'Apache2 test: fail' && Kexit 1)
 
   # Request a page via the web server, to make sure it's running and responds.
   #- "curl http://localhost/"

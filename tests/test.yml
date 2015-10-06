@@ -3,8 +3,32 @@
   remote_user: travis
   sudo: true
 
-  vars_files:
-    - vars/all.yml
+  vars:
+    server:
+        install: '1'
+        packages: [vim, git]
+        timezone: UTC
+        locale: en_US.UTF-8
+    apache:
+        install: '1'
+        servername: travis.dev
+        dir_root: '/var/www/.*/www'
+        www_root: '/var/www/%0/www'
+    mysql:
+        install: '1'
+        root_password: root
+        database: drupal
+        user: root
+        password: root
+        dump: ''
+    php:
+        install: '1'
+        ppa: php5-5.6
+        packages: [php5-cli, php5-intl, php5-mcrypt, php5-mysql]
+    xdebug:
+        install: '1'
+    composer:
+        install: '1'
 
   roles:
     - server

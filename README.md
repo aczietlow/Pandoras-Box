@@ -1,4 +1,6 @@
 # Pandora's box
+[![Build Status](https://travis-ci.org/aczietlow/Pandoras-Box.svg)](https://travis-ci.org/aczietlow/Pandoras-Box)
+
 A vagrant box with using my opinions for Drupal development.
 
 ## prereqs

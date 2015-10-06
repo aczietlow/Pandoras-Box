@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  remote_user: travis
+  sudo: true
+
+  vars_files:
+    - ../ansible/vars/all.yml
+
+  roles:
+    - server
+    - apache
+    - mysql
+#    - php

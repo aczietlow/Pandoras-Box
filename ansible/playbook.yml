@@ -5,10 +5,9 @@
     - vars/all.yml
   roles:
     - server
-    - vagrant_local
     - apache
-    - mysql
-    - php
-    - xdebug
-    - composer
-    - app
+#    - mysql
+#    - php
+#    - xdebug
+#    - composer
+#    - app

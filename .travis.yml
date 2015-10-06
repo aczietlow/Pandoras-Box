@@ -1,0 +1,28 @@
+---
+language: python
+python: "2.7"
+
+install:
+  # Install Ansible.
+  - pip install ansible
+
+  # Add ansible.cfg to set local roles path.
+  - "{ echo '[defaults]'; echo 'roles_path = ansible/roles/'; } >> ansible.cfg"
+
+script:
+  # Check syntax
+  - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+
+  # Test the roles will actually run
+  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
+
+  # Test the roles did what we said they would
+  # On the travis-ci.org containers We get Apache 2.2.22 locally (trusty64) we're using 2.4.7.
+  - >
+    apache2 -v
+    | grep -q 'Apache/2.2.22'
+    && (echo 'Apache2 test: pass' && exit 0)
+    || (echo 'Apache2 test: fail' && exit 1)
+
+  # Request a page via the web server, to make sure it's running and responds.
+  - "curl http://localhost/"

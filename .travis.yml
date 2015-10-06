@@ -25,4 +25,4 @@ script:
     || (echo 'Apache2 test: fail' && exit 1)
 
   # Request a page via the web server, to make sure it's running and responds.
-  #- "curl http://localhost/"
+  - "curl http://localhost/"

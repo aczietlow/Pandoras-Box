@@ -16,21 +16,13 @@ script:
   # Test the roles will actually run
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
 
-  # Test the roles are idempotent
-  - >
-    ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
-    | grep -q 'changed=0.*failed=0'
-    && (echo 'Idempotence test: pass' && exit 0)
-    || (echo 'Idempotence test: fail' && exit 1)
-
-
   # Test the roles did what we said they would
   # On the travis-ci.org containers We get Apache 2.2.22 locally (trusty64) we're using 2.4.7.
   - >
     apache2 -v
     | grep -q 'Apache/2.2.22'
     && (echo 'Apache2 test: pass' && exit 0)
-    || (echo 'Apache2 test: fail' && Kexit 1)
+    || (echo 'Apache2 test: fail' && exit 1)
 
   # Request a page via the web server, to make sure it's running and responds.
   #- "curl http://localhost/"

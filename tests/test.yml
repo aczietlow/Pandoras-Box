@@ -10,4 +10,4 @@
     - server
     - apache
     - mysql
-    - php
+#    - php

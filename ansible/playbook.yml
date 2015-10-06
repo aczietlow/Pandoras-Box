@@ -7,7 +7,7 @@
     - server
     - apache
     - mysql
-    - php
-    - xdebug
-    - composer
-    - app
+#    - php
+#    - xdebug
+#    - composer
+#    - app

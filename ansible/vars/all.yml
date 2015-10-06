@@ -12,10 +12,9 @@ apache:
 mysql:
     install: '1'
     root_password: root
-    database: drupal
-    user: root
-    password: root
-    dump: ''
+    database: default
+    user: default
+    password: default
 php:
     install: '1'
     ppa: php5-5.6

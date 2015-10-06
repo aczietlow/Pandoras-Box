@@ -31,6 +31,8 @@ Vagrant.configure("2") do |config|
     #End config
 
     config.vm.box = "ubuntu/trusty64"
+    config.vm.box_version = "20150930.0.0"
+    config.vm.box_check_update = true
 
     # Only needed for building prototype.
     config.vm.network "private_network", ip: "#{ip}"

@@ -6,7 +6,7 @@
   roles:
     - server
     - apache
-#    - mysql
+    - mysql
 #    - php
 #    - xdebug
 #    - composer

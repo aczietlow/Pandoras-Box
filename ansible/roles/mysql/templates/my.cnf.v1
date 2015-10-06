@@ -77,9 +77,6 @@ query_cache_size = {{ mysql_query_cache_size }}
 # Other settings.
 wait_timeout = {{ mysql_wait_timeout }}
 
-# Try number of CPU's * 2 for thread_concurrency.
-thread_concurrency = {{ mysql_thread_concurrency }}
-
 # InnoDB settings.
 innodb_file_per_table = {{ mysql_innodb_file_per_table }}
 innodb_buffer_pool_size = {{ mysql_innodb_buffer_pool_size }}

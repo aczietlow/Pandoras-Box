@@ -26,10 +26,9 @@ script:
 
 
   # Test the roles did what we said they would
-  - apache2 -v
   - >
     apache2 -v
-    | grep -q 'Apache/2.4.12'
+    | grep -q 'Apache/2.4.22'
     && (echo 'Apache2 test: pass' && exit 0)
     || (echo 'Apache2 test: fail' && Kexit 1)
 

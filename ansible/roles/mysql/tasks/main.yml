@@ -22,6 +22,14 @@
     - 127.0.0.1
     - ::1
     - localhost
+- name: Copy my.cnf global MySQL configuration.
+  template:
+    src: my.cnf.v1
+    dest: "/etc/mysql/my.cnf"
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart mysql
 
 - name: mysql | Create databases
   mysql_db: name={{ mysql.database }} state=present login_user=root login_password={{ mysql.root_password }}

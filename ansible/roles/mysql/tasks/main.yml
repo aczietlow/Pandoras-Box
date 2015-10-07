@@ -31,6 +31,13 @@
     mode: 0644
   notify: restart mysql
 
+# In order to change the innodb log file size, we need to rename the existing ones.
+- name: Move the existing logfiles
+  shell:  for j in ib_logfile*; do mv -v -- "$j" "$j.bak"; done
+  args:
+    chdir: /var/lib/mysql/
+    removes: ib_logfile0
+
 - name: mysql | Create databases
   mysql_db: name={{ mysql.database }} state=present login_user=root login_password={{ mysql.root_password }}
 

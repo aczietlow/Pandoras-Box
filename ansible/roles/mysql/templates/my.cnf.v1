@@ -48,15 +48,16 @@ bind-address            = 127.0.0.1
 #
 # * Fine Tuning
 #
-mysql_key_buffer_size: "256M"
-mysql_max_allowed_packet: "64M"
-mysql_table_open_cache: "256"
-mysql_sort_buffer_size: "1M"
-mysql_read_buffer_size: "1M"
-mysql_read_rnd_buffer_size: "4M"
-mysql_myisam_sort_buffer_size: "64M"
-mysql_thread_cache_size: "8"
-mysql_query_cache_size: "16M"
+key_buffer_size = "256M"
+max_allowed_packet = "64M"
+table_open_cache = "256"
+sort_buffer_size = "1M"
+read_buffer_size = "1M"
+read_rnd_buffer_size = "4M"
+myisam_sort_buffer_size = "64M"
+thread_stack            = 192K
+thread_cache_size = "8"
+query_cache_size = "16M"
 # This replaces the startup script and checks MyISAM tables if needed
 # the first time they are touched
 myisam-recover         = BACKUP

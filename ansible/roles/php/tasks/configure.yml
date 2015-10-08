@@ -2,7 +2,7 @@
 - name: Copy php.ini file.
   template:
     src: php.ini.v1
-    dest: "/etc/php5/apache2"
+    dest: "/etc/php5/apache2/php.ini"
     owner: root
     group: root
     mode: 0644

@@ -1,0 +1,5 @@
+- name: Install Drush
+  shell: composer global require drush/drush:dev-master
+
+- name: Include composer vendor binaries in the path.
+  shell: export PATH="$HOME/.composer/vendor/bin:$PATH"

@@ -8,6 +8,7 @@
     - apache
     - mysql
     - php
-#    - xdebug
-#    - composer
+    - composer
+    - drush
+    - xdebug
 #    - app

@@ -1,0 +1,5 @@
+---
+- name: Install Drush
+  shell: composer global require drush/drush:dev-master
+  become: yes
+  become_user: vagrant

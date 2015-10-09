@@ -2,3 +2,38 @@
 - name: Install xDebug
   sudo: yes
   apt: pkg=php5-xdebug state=latest
+
+- name: set xdebug nesting level for behat
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini
+              regexp='^xdebug\.max_nesting_level ='
+              line='xdebug.max_nesting_level = 500'
+
+- name: Enable xdebug remote enable.
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini
+              regexp='^xdebug\.remote_enable ='
+              line='xdebug.remote_enable = true'
+
+- name: set xdebug remote_connect_back
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini
+              regexp='^xdebug\.remote_connect_back ='
+              line='xdebug.remote_connect_back = 1'
+
+- name: set xdebug remote_autostart
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini
+              regexp='^xdebug\. ='
+              line='xdebug.remote_autostart = 1'
+
+- name: set xdebug profiler_enable_trigger
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini
+              regexp='^xdebug\.profiler_enable_trigger ='
+              line='xdebug.profiler_enable_trigger = 1'
+
+- name: set xdebug profiler_output_dir
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini
+              regexp='^xdebug\.profiler_output_dir ='
+              line='xdebug.profiler_output_dir = /tmp'
+
+- name: set xdebug trace_output_name
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini
+              regexp='^xdebug\.trace_output_name ='
+              line='xdebug.trace_output_name = cachegrind.out.%s.%u'

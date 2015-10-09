@@ -10,5 +10,5 @@
     - php
     - composer
     - drush
-#    - xdebug
+    - xdebug
 #    - app

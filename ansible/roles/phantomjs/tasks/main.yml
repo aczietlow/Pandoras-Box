@@ -1,0 +1,11 @@
+---
+- name: Download phantomjs
+  get_url: url=https://bitbucket.org/ariya/phantomjs/downloads/{{ phantomjs.version }}.tar.bz2
+           dest=/usr/local/share/{{ phantomjs.version }}.tar.bz2
+
+- name: Untar phantom tarball
+  shell: chdir=/usr/local/share/ tar xjf {{ phantomjs.version }}.tar.bz2 creates=/usr/local/share/{{ phantomjs.version }}
+
+- name: symlink the phantomjs executable
+  file: dest=/opt/phantomjs src=/usr/local/share/{{ phantomjs.version }}/bin/phantomjs state=link
+  sudo: yes

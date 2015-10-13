@@ -14,4 +14,4 @@
   * pimp
   * mailhog
   * PAlly
-  
+* Clean up and minimize the final box before exporting

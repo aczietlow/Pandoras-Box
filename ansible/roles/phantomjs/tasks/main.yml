@@ -7,5 +7,5 @@
   shell: chdir=/usr/local/share/ tar xjf {{ phantomjs.version }}.tar.bz2 creates=/usr/local/share/{{ phantomjs.version }}
 
 - name: symlink the phantomjs executable
-  file: dest=/opt/phantomjs src=/usr/local/share/{{ phantomjs.version }}/bin/phantomjs state=link
+  file: src=/usr/local/share/{{ phantomjs.version }}/bin/phantomjs dest=/usr/local/bin/phantomjs state=link
   sudo: yes

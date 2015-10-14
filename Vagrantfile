@@ -24,17 +24,14 @@ end
 
 Vagrant.configure("2") do |config|
 
-    # Config
-    env_prefix  = ENV['DRUPAL_VAGRANT_ENV_PREFIX'] || 'DRUPAL_VAGRANT'
-    ip          = ENV["#{env_prefix}_IP"] || '10.33.36.11'
-    project     = ENV["#{env_prefix}_PROJECT"] || 'hermes'
-    #End config
-
     config.vm.box = "ubuntu/trusty64"
     config.vm.box_version = "20150930.0.0"
     config.vm.box_check_update = true
 
-    # Only needed for building prototype.
+    # @@ Only needed for building prototype.
+    env_prefix  = ENV['DRUPAL_VAGRANT_ENV_PREFIX'] || 'DRUPAL_VAGRANT'
+    ip          = ENV["#{env_prefix}_IP"] || '10.33.36.11'
+    project     = ENV["#{env_prefix}_PROJECT"] || 'hermes'
     config.vm.network "private_network", ip: "#{ip}"
 
     config.vm.provider :virtualbox do |v|

@@ -7,7 +7,7 @@ server:
 apache:
     install: '1'
     servername: localhost
-    dir_root: '/var/www/.*/www'
+    dir_root: '/var/www/*'
     www_root: '/var/www/%0/www'
 mysql:
     install: '1'

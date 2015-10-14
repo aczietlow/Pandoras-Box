@@ -17,7 +17,7 @@
         RewriteBase /
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule /var/www/sites/.*/www/(.*)$ index.php/?q=$1 [L,QSA]
+        RewriteRule /var/www/.*/www/(.*)$ index.php/?q=$1 [L,QSA]
         Order allow,deny
         Allow from all
     </Directory>

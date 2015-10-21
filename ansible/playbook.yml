@@ -12,3 +12,4 @@
     - drush
     - xdebug
     - phantomjs
+    - nodejs

@@ -1,0 +1,22 @@
+---
+- name: Download NVM
+  shell: curl https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh --output nvminstall.sh
+  args:
+    creates: nvminstall.sh
+  become: yes
+  become_user: vagrant
+
+- name: Install NVM
+  shell: sh nvminstall.sh
+  become: yes
+  become_user: vagrant
+
+- name: Install nodejs
+  shell: "./.nvm/nvm-exec install stable"
+  become: yes
+  become_user: vagrant
+
+- name: Use stable NodeJS
+  shell: "./.nvm/nvm-exec use stable"
+  become: yes
+  become_user: vagrant

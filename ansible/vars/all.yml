@@ -4,11 +4,14 @@ server:
     packages: [vim, git]
     timezone: UTC
     locale: en_US.UTF-8
+    base_location: '/var/www'
+adminer:
+    directory: '{{ server.base_location }}/html'
 apache:
     install: '1'
     servername: localhost
-    dir_root: '/var/www/*'
-    www_root: '/var/www/%0/www'
+    dir_root: '{{ server.base_location }}/*'
+    www_root: '{{ server.base_location }}/%0/www'
 mysql:
     install: '1'
     root_password: root

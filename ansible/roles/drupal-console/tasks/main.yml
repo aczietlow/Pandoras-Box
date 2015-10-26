@@ -1,0 +1,5 @@
+- name: Install Drupal Console
+  shell: curl -LSs http://drupalconsole.com/installer | php
+
+- name: Make Drupal Console available to the command line.
+  shell: mv console.phar /usr/local/bin/drupal

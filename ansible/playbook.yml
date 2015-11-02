@@ -13,3 +13,5 @@
     - xdebug
     - phantomjs
     - drupal-console
+    - daemonize
+    - mailhog

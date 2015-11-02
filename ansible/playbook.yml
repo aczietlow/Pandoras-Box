@@ -12,3 +12,5 @@
     - drush
     - xdebug
     - phantomjs
+    - daemonize
+    - mailhog

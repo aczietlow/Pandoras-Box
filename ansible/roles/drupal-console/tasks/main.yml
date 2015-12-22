@@ -1,0 +1,10 @@
+- name: Install Drupal Console
+  shell: curl https://drupalconsole.com/installer -L -o drupal.phar
+
+- name: Make Drupal Console available to the command line.
+  shell: mv drupal.phar /usr/local/bin/drupal
+
+- name: Ensure Drupal Console is executable.
+  file:
+    path: /usr/local/bin/drupal
+    mode: 0755
